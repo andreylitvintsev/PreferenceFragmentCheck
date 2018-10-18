@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">PreferenceFragmentCheck</string>
+
+    <string name="switchPreference">Switch preference</string>
+    <string name="editTextPreference">Edit text preference</string>
+    <string name="firstPreferenceCategory">Category 1</string>
+    <string name="secondPreferenceCategory">Category 2</string>
+</resources>
