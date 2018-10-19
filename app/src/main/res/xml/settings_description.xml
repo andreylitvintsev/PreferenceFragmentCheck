@@ -1,25 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-
     <PreferenceCategory
             android:title="Preference category">
 
         <SwitchPreference
-                android:defaultValue="false"
-                android:key="firstSwitchPreference" android:title="@string/switchPreference"/>
+            android:defaultValue="false"
+            android:key="firstSwitchPreference" android:title="@string/firstSwitchPreference"/>
+
     </PreferenceCategory>
+
     <EditTextPreference
             android:defaultValue="Default value"
             android:selectAllOnFocus="true"
             android:singleLine="true"
             android:title="@string/editTextPreference" android:key="editTextPreference"/>
+
     <PreferenceCategory
             android:title="Preference category">
 
         <SwitchPreference
                 android:defaultValue="false"
-                android:key="secondSwitchPreference" android:title="@string/switchPreference"
+                android:key="secondSwitchPreference" android:title="@string/secondSwitchPreference"
                 android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
     </PreferenceCategory>
+
 </PreferenceScreen>

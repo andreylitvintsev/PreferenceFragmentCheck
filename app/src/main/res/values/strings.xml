@@ -1,8 +1,14 @@
 <resources>
     <string name="app_name">PreferenceFragmentCheck</string>
 
-    <string name="switchPreference">Switch preference</string>
+    <string name="settingsMenuItem">Settings</string>
+
+    <string name="firstSwitchPreference">Switch preference 1</string>
+    <string name="secondSwitchPreference">Switch preference 2</string>
     <string name="editTextPreference">Edit text preference</string>
     <string name="firstPreferenceCategory">Category 1</string>
     <string name="secondPreferenceCategory">Category 2</string>
+
+    <string name="preferenceDefaultValue">none</string>
+
 </resources>

@@ -3,12 +3,33 @@ package andreylitvintsev.github.com.preferencefragmentcheck
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 
-class MainActivity : AppCompatActivity() {
+interface FragmentNavigator {
+    fun showStatusFragment()
+    fun showSettingsFragment()
+}
+
+// TODO: посмотреть как реализуется навигация между фрагментами
+class MainActivity : AppCompatActivity(), FragmentNavigator {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
 
-        supportFragmentManager.beginTransaction().add(R.id.container, SettingsFragment()).commit()
+        if (supportFragmentManager.findFragmentById(android.R.id.content) == null) {
+            showStatusFragment()
+        }
     }
+
+    override fun showStatusFragment() {
+        supportFragmentManager.beginTransaction()
+            .replace(android.R.id.content, StatusFragment())
+            .commit()
+    }
+
+    override fun showSettingsFragment() {
+        supportFragmentManager.beginTransaction()
+            .replace(android.R.id.content, SettingsFragment())
+            .addToBackStack(null)
+            .commit()
+    }
+
 }
